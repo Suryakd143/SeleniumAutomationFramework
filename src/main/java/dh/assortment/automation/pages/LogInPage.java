@@ -1,4 +1,4 @@
-package dh.automation.pages;
+package dh.assortment.automation.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

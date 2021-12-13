@@ -1,8 +1,8 @@
-package dh.automation.features;
+package dh.assortment.automation.features;
 
 import org.testng.Assert;
 
-import dh.automation.pages.LogInPage;
+import dh.assortment.automation.pages.LogInPage;
 
 /**
  * This feature class used to perform all LoginPage related features

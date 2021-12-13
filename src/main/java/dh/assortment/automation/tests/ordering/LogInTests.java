@@ -2,9 +2,10 @@ package dh.assortment.automation.tests.ordering;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import dh.assortment.automation.features.LogIn;
 import dh.assortment.automation.framework.AppConfig;
 import dh.assortment.automation.framework.TestInit;
-import dh.automation.features.LogIn;
 
 public class LogInTests extends TestInit{
 	public static String userName, password; 
