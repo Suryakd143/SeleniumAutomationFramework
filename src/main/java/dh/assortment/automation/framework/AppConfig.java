@@ -1,5 +1,7 @@
 package dh.assortment.automation.framework;
 
+import dh.assortment.automation.utils.ConfigReader;
+
 /**
  * This class used to define all the application related configurations and
  * store in global variables. This class initialized once before test suite in
@@ -9,6 +11,8 @@ package dh.assortment.automation.framework;
  *
  */
 public class AppConfig {
+	
+	public static ConfigReader configReaderObj = new ConfigReader();
 
 	public static String userName, password;
 	public static String appURL;
@@ -16,9 +20,9 @@ public class AppConfig {
 	public static int defaultCount;
 
 	public static void init() {
-		userName = "user@phptravels.com";
-		password = "demouser";
-		appURL = "https://www.phptravels.net/login";
+		userName =  configReaderObj.getPropertyValue("userName");
+		password = configReaderObj.getPropertyValue("password");
+		appURL = configReaderObj.getPropertyValue("appURL");
 	}
 
 }
