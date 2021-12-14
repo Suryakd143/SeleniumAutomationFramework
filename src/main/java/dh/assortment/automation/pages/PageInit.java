@@ -1,10 +1,12 @@
-package dh.assortment.automation.framework;
+package dh.assortment.automation.pages;
 
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import dh.assortment.automation.framework.DriverFactory;
 
 public class PageInit {
 	protected static WebDriver driver;

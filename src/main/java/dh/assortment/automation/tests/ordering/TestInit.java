@@ -1,8 +1,11 @@
-package dh.assortment.automation.framework;
+package dh.assortment.automation.tests.ordering;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+
+import dh.assortment.automation.framework.AppConfig;
+import dh.assortment.automation.framework.Application;
 
 public class TestInit {
 

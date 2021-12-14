@@ -2,19 +2,27 @@ package dh.assortment.automation.framework;
 
 import java.time.Duration;
 
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+/**
+ * This class implements the driver opening functionalities. Before initialize
+ * driver class we have to set the path of the driver using System.setproperty
+ * for different drivers. System.setProperty() is a java in-build method to set
+ * any property and you can also get the same property throughout the project
+ * using System.getProperty() method.
+ * 
+ * @author dh207483
+ *
+ */
 public class DriverFactory {
 
 	public static WebDriver driver;
 
 	public static WebDriver getDriver() {
-		
+
 		String browserName = "chrome";
 		if (driver == null) {
 			if (browserName.equalsIgnoreCase("firefox")) {

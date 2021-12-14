@@ -2,7 +2,6 @@ package dh.assortment.automation.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import dh.assortment.automation.framework.PageInit;
 
 /**
  * This class contains all the page elements and methods for login page.

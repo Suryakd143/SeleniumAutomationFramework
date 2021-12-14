@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 
 import dh.assortment.automation.features.LogIn;
 import dh.assortment.automation.framework.AppConfig;
-import dh.assortment.automation.framework.TestInit;
 
 public class LogInTests extends TestInit{
 	public static String userName, password; 
