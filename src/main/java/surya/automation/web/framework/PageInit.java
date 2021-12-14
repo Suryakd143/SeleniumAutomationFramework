@@ -1,4 +1,4 @@
-package surya.automation.web.pages;
+package surya.automation.web.framework;
 
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import surya.automation.framework.DriverFactory;
+import surya.automation.web.framework.DriverFactory;
 
 public class PageInit {
 	protected static WebDriver driver;

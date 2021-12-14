@@ -1,4 +1,4 @@
-package surya.automation.web.utils;
+package surya.automation.utils;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -9,7 +9,7 @@ import java.util.Properties;
 public class ConfigManager {
 
 	private Properties properties;
-	private final String propertyFilePath = "configs/Configuration.properties";
+	private final String propertyFilePath = "resources/configs/Configuration.properties";
 
 	public ConfigManager() {
 		BufferedReader reader;

@@ -3,10 +3,11 @@ package surya.automation.web.tests;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import surya.automation.framework.AppConfig;
+import surya.automation.web.framework.AppConfig;
 import surya.automation.web.features.LogIn;
+import surya.automation.web.framework.TestInit;
 
-public class LogInTests extends TestInit{
+public class LogInTests extends TestInit {
 	public static String userName, password; 
 
 	@BeforeClass
