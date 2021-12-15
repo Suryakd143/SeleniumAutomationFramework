@@ -21,6 +21,7 @@ public class AppConfig {
     // Following variables are related to application.
     public static String userName, password;
     public static String appURL,apiBaseUrl;
+    public static String dbUserName,dbPassword,dbUrl;
 
     // Following variables are related to configuration type variables
     public static boolean isConfigured, isEnabled;
@@ -31,6 +32,11 @@ public class AppConfig {
         userName = configReaderObj.getPropertyValue("userName");
         password = configReaderObj.getPropertyValue("password");
         appURL = configReaderObj.getPropertyValue("appURL");
+
+        // DB DETAILS
+        dbUserName = configReaderObj.getPropertyValue("dbUserName");
+        dbPassword = configReaderObj.getPropertyValue("dbPassword");
+        dbUrl = configReaderObj.getPropertyValue("dbUrl");
 
         // APPLICATION VARIABLES
         USER_PATH = System.getProperty("user.dir");
