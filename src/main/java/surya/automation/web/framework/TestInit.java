@@ -7,7 +7,7 @@ import java.util.Map;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
-
+import org.testng.asserts.SoftAssert;
 import surya.automation.utils.ExcelManager;
 
 
@@ -25,9 +25,7 @@ import surya.automation.utils.ExcelManager;
  * @AfterSuite
  */
 public class TestInit {
-    /*
-     * Load Application configurations before executing tests.
-     */
+    //Load Application configurations before executing tests.
     @BeforeSuite(alwaysRun = true)
     public void beforeSuite() throws IOException {
         AppConfig.init();
@@ -35,21 +33,16 @@ public class TestInit {
     }
 
     @BeforeClass(alwaysRun = true)
-    /*
-     * Launch application before each testClass
-     */
-    public void beforeClass() {
+    // Launch application before each testClass
+    public void setUp() {
         launchApplication();
     }
 
     @AfterClass(alwaysRun = true)
-    /*
-     * Quite application after each testClass
-     */
-    public void afterClass() {
+    //Quite application after each testClass
+    public void tearDown() {
         closeApplication();
     }
-
 
     /*
      * This method used to open the application.
