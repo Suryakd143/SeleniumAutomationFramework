@@ -1,13 +1,16 @@
 package surya.automation.web.framework;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
+import surya.automation.utils.DBManager;
 import surya.automation.utils.ExcelManager;
 
 
@@ -25,6 +28,18 @@ import surya.automation.utils.ExcelManager;
  * @AfterSuite
  */
 public class TestInit {
+
+//    DBManager dbManager;
+//    {
+//        try {
+//            dbManager = DBManager.getInstance();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
     //Load Application configurations before executing tests.
     @BeforeSuite(alwaysRun = true)
     public void beforeSuite() throws IOException {
@@ -42,6 +57,17 @@ public class TestInit {
     //Quite application after each testClass
     public void tearDown() {
         closeApplication();
+    }
+
+    @AfterSuite(alwaysRun = true)
+    //Quite application after each testClass
+    public void afterSuite() {
+        closeApplication();
+//        try {
+//            dbManager.closeConnection();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
     }
 
     /*

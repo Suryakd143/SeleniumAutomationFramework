@@ -10,6 +10,15 @@
 (9) org.openqa.selenium.NoSuchSessionException  
 (10) org.openqa.selenium.StaleElementReferenceException
 # Locators in selenium
+(1) By.className    
+(2) By.cssSelector  
+(3) By.id   
+(4) By.linkText     
+(5) By.name     
+(6) By.partialLinkText  
+(7) By.tagName  
+(8) By.xpath    
+
 
 
 

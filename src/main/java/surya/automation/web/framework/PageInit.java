@@ -9,7 +9,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.*;
 
-import surya.automation.web.framework.DriverFactory;
 
 public class PageInit {
     protected static WebDriver driver;
@@ -21,6 +20,7 @@ public class PageInit {
      */
     public PageInit() {
         driver = DriverFactory.getDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3000));
         PageFactory.initElements(driver, this);
     }
 
@@ -82,11 +82,12 @@ public class PageInit {
      *
      * @param mainWindow
      */
-    protected void switchWindow(String mainWindow) {
+    protected void switchWindow(String...mainWindow) {
         try {
+            String mainWindowName = mainWindow.length > 0 ? driver.getWindowHandle(): mainWindow[0];
             Set<String> childWindows = driver.getWindowHandles();
             for (String childWindow : childWindows) {
-                if (!childWindow.equalsIgnoreCase(mainWindow)) {
+                if (!childWindow.equalsIgnoreCase(mainWindowName)) {
                     driver.switchTo().window(childWindow);
                 }
             }

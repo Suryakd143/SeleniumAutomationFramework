@@ -23,7 +23,7 @@ public class APIHandler {
     public APIHandler() {
         AppConfig.init();
         RestAssured.baseURI = AppConfig.apiBaseUrl;
-        RestAssured.given().auth().oauth2("accessToken");
+        RestAssured.given().auth().oauth2("bearerToken");
         RestAssured.useRelaxedHTTPSValidation();
     }
 

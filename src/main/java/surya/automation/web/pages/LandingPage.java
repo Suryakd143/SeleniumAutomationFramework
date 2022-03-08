@@ -12,7 +12,7 @@ public class LandingPage extends PageInit {
 	@FindBy(name = "password")
 	private WebElement passwordTextBox;
 	
-	@FindBy(xpath = "//button[(@type='submit')]")
+	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement submitButton;
 
 }
